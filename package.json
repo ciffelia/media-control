@@ -6,5 +6,15 @@
   "homepage": "https://github.com/ciffelia/media-control#readme",
   "bugs": "https://github.com/ciffelia/media-control/issues",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "main": "src/main/index.js",
+  "scripts": {
+    "start": "electron .",
+    "lint": "standard",
+    "fix": "standard --fix"
+  },
+  "devDependencies": {
+    "electron": "^7.1.7",
+    "standard": "^14.3.1"
+  }
 }
