@@ -1,0 +1,10 @@
+{
+  "name": "media-control",
+  "version": "0.0.1",
+  "author": "Ciffelia <mc.prince.0203@gmail.com> (https://ciffelia.com/)",
+  "repository": "github:ciffelia/media-control",
+  "homepage": "https://github.com/ciffelia/media-control#readme",
+  "bugs": "https://github.com/ciffelia/media-control/issues",
+  "license": "MIT",
+  "private": true
+}
