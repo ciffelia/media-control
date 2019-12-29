@@ -3,7 +3,7 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  lint:
+  build:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -19,3 +19,4 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn install --frozen-lockfile
       - run: yarn run lint
+      - run: yarn run build

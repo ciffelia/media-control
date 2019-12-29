@@ -1,0 +1,10 @@
+appId: "com.ciffelia.media-control"
+
+files:
+  - assets/**/*
+  - node_modules/**/*
+  - src/**/*
+  - package.json
+
+directories:
+  buildResources: dist

@@ -16,13 +16,16 @@
   },
   "scripts": {
     "start": "electron .",
+    "generate-electron-icons": "electron-icon-builder --input=./assets/icon.png --output=./dist --flatten",
+    "build": "npm run generate-electron-icons && electron-builder",
     "lint": "standard",
     "fix": "standard --fix",
-    "postinstall": "electron-rebuild"
+    "postinstall": "electron-builder install-app-deps"
   },
   "devDependencies": {
     "electron": "^4.2.12",
-    "electron-rebuild": "^1.8.8",
+    "electron-builder": "^21.2.0",
+    "electron-icon-builder": "^1.0.2",
     "standard": "^14.3.1"
   },
   "dependencies": {
