@@ -9,6 +9,9 @@
   "private": true,
   "main": "src/main/index.js",
   "os" : ["win32"],
+  "engines": {
+    "node" : "<12"
+  },
   "scripts": {
     "start": "electron .",
     "lint": "standard",
