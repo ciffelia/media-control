@@ -8,7 +8,9 @@
   "license": "MIT",
   "private": true,
   "main": "src/main/index.js",
-  "os" : ["win32"],
+  "os": [
+    "win32"
+  ],
   "engines": {
     "node" : "<12"
   },
