@@ -2,8 +2,6 @@ const { app, ipcMain, BrowserWindow } = require('electron')
 const path = require('path')
 const MediaController = require('./MediaController')
 
-const isProduction = require('./isProduction')
-
 let mainWindow
 
 function createWindow () {
@@ -26,12 +24,12 @@ function createWindow () {
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
-      devTools: !isProduction,
+      devTools: !app.isPackaged,
       preload: path.join(__dirname, '../renderer/preload.js')
     }
   })
 
-  if (!isProduction) mainWindow.webContents.openDevTools()
+  if (!app.isPackaged) mainWindow.webContents.openDevTools()
 
   mainWindow.loadFile(path.join(__dirname, '../renderer/index.html'))
 
