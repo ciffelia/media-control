@@ -1,10 +1,15 @@
-window.addEventListener('DOMContentLoaded', () => {
-  const replaceText = (selector, text) => {
-    const element = document.getElementById(selector)
-    if (element) element.innerText = text
-  }
+const WindowManager = require('./WindowManager')
+const MouseListener = require('./MouseListener')
 
-  for (const type of ['chrome', 'node', 'electron']) {
-    replaceText(`${type}-version`, process.versions[type])
-  }
+const windowManager = new WindowManager()
+const mouseListener = new MouseListener()
+
+window.addEventListener('DOMContentLoaded', () => {
+  windowManager.init()
+  mouseListener.init()
+})
+
+window.addEventListener('close', () => {
+  windowManager.destroy()
+  mouseListener.destroy()
 })

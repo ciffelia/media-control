@@ -8,13 +8,19 @@
   "license": "MIT",
   "private": true,
   "main": "src/main/index.js",
+  "os" : ["win32"],
   "scripts": {
     "start": "electron .",
     "lint": "standard",
-    "fix": "standard --fix"
+    "fix": "standard --fix",
+    "postinstall": "electron-rebuild"
   },
   "devDependencies": {
-    "electron": "^7.1.7",
+    "electron": "^4.2.12",
+    "electron-rebuild": "^1.8.8",
     "standard": "^14.3.1"
+  },
+  "dependencies": {
+    "ffi": "^2.3.0"
   }
 }
