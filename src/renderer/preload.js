@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
   mouseListener.init()
 })
 
-window.addEventListener('close', () => {
+window.addEventListener('beforeunload', () => {
   windowManager.destroy()
   mouseListener.destroy()
 })
