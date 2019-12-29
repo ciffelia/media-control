@@ -1,5 +1,6 @@
 const { app, ipcMain, BrowserWindow } = require('electron')
 const path = require('path')
+const TrayService = require('./TrayService')
 const MediaController = require('./MediaController')
 
 let mainWindow
@@ -32,6 +33,9 @@ function createWindow () {
   if (!app.isPackaged) mainWindow.webContents.openDevTools()
 
   mainWindow.loadFile(path.join(__dirname, '../renderer/index.html'))
+
+  const trayService = new TrayService()
+  trayService.init()
 
   const mediaController = new MediaController()
 
