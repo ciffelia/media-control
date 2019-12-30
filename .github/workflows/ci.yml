@@ -17,6 +17,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Update node-gyp to fix nodejs/node-gyp#1933
+        run: |
+          $nodeInstall = Split-Path((Get-Command node).Path)
+          cd "$nodeInstall/node_modules/npm"
+          npm update node-gyp
       - run: yarn install --frozen-lockfile
       - run: yarn run lint
       - run: yarn run build
