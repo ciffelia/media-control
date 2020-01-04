@@ -26,7 +26,7 @@ class WindowManager {
     const { x, y } = remote.screen.getCursorScreenPoint()
     this.browserWindow.setPosition(x - this.width / 2, y - this.height / 2)
 
-    this.browserWindow.show()
+    this.browserWindow.showInactive()
   }
 
   hideWindow () {
