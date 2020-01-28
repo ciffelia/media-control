@@ -23,7 +23,6 @@ function createWindow () {
     frame: false,
     transparent: true,
     webPreferences: {
-      nodeIntegration: false,
       contextIsolation: true,
       devTools: !app.isPackaged,
       preload: path.join(__dirname, '../renderer/preload.js')

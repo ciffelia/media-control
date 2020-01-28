@@ -11,9 +11,6 @@
   "os": [
     "win32"
   ],
-  "engines": {
-    "node" : "<12"
-  },
   "scripts": {
     "start": "electron .",
     "generate-electron-icons": "electron-icon-builder --input=./assets/icon.png --output=./dist --flatten",
@@ -23,7 +20,7 @@
     "postinstall": "electron-builder install-app-deps"
   },
   "devDependencies": {
-    "electron": "^6.1.7",
+    "electron": "^7.1.10",
     "electron-builder": "^22.3.2",
     "electron-icon-builder": "^1.0.2",
     "standard": "^14.3.1"
